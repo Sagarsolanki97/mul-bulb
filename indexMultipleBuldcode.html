@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .bulbs {
+        display:flex;    }
+</style>
+<body>
+    <div class="bulbs">
+        <img style="display: none;" class="off" src="pic_bulboff.gif" alt="">
+        <img style="display: none;" class="on" src="pic_bulbon.gif" alt="">
+        <img style="display: none;" class="off" src="pic_bulboff.gif" alt="">
+        <img style="display: none;" class="on" src="pic_bulbon.gif" alt="">
+        <img style="display: none;" class="off" src="pic_bulboff.gif" alt="">
+        <img style="display: none;" class="on" src="pic_bulbon.gif" alt="">
+        <img style="display: none;" class="off" src="pic_bulboff.gif" alt="">
+        <img style="display: none;" class="on" src="pic_bulbon.gif" alt="">
+    </div>
+    <button onclick="onclick()">click
+    </button>
+    <script>
+        var off = document.getElementsByClassName("off");
+        var on = document.getElementsByClassName("on");
+        var onclick = () => {
+            
+
+
+            for (let i = 0; i < off.length; i++) {
+                console.log(off.length);
+console.log(on.length);
+               
+                if (off[i].style.display == "none") {
+                    off[i].style.display = "block";
+                    on[i].style.display = "none";
+                } else {
+                    on[i].style.display = "block";
+                    off[i].style.display = "none";
+                }
+            }
+
+        }
+    </script>
+</body>
+
+</html>
